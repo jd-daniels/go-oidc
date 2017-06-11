@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/go-oidc/jose"
-	"github.com/coreos/go-oidc/key"
+	"github.com/gambol99/go-oidc/jose"
+	"github.com/gambol99/go-oidc/key"
 )
 
 func TestVerifyClientClaims(t *testing.T) {
@@ -232,7 +232,6 @@ func TestJWTVerifier(t *testing.T) {
 			jwt:     newJWT(iss, "XXX", "YYY", past12, future12, priv1.Signer()),
 			wantErr: true,
 		},
-
 		{
 			name: "JWT signed with available key",
 			verifier: JWTVerifier{

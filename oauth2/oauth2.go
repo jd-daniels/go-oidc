@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	phttp "github.com/coreos/go-oidc/http"
+	phttp "github.com/gambol99/go-oidc/http"
 )
 
 // ResponseTypesEqual compares two response_type values. If either
