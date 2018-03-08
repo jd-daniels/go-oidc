@@ -42,7 +42,11 @@ func NewJWT(header JOSEHeader, claims Claims) (jwt JWT, err error) {
 
 func (j *JWT) KeyID() (string, bool) {
 	kID, ok := j.Header[HeaderKeyID]
-	return kID, ok
+	if !ok {
+		return "", false
+	}
+	kIDStr, ok := kID.(string)
+	return kIDStr, ok
 }
 
 func (j *JWT) Claims() (Claims, error) {
