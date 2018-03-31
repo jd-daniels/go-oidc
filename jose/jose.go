@@ -64,7 +64,7 @@ const (
 	EncA256GCM      = "A256GCM"
 )
 
-type JOSEHeader map[string]string
+type JOSEHeader map[string]interface{}
 
 func (j JOSEHeader) Validate() error {
 	if _, exists := j[HeaderKeyAlgorithm]; !exists {
