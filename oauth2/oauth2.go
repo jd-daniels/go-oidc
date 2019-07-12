@@ -99,10 +99,10 @@ func NewClient(hc phttp.Client, cfg Config) (c *Client, err error) {
 		return
 	}
 
-	if len(cfg.Credentials.Secret) == 0 {
-		err = errors.New("missing client secret")
-		return
-	}
+	//if len(cfg.Credentials.Secret) == 0 {
+	//	err = errors.New("missing client secret")
+	//	return
+	//}
 
 	if cfg.AuthMethod == "" {
 		cfg.AuthMethod = AuthMethodClientSecretBasic
